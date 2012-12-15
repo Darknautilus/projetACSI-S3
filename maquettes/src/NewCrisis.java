@@ -45,7 +45,7 @@ public class NewCrisis extends JDialog {
 		setBounds(100, 100, 488, 288);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
-		getContentPane().add(contentPanel, BorderLayout.NORTH);
+		getContentPane().add(contentPanel, BorderLayout.WEST);
 		contentPanel.setLayout(new FormLayout(new ColumnSpec[] {
 				ColumnSpec.decode("max(5dlu;default)"),
 				FormFactory.RELATED_GAP_COLSPEC,

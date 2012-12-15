@@ -10,6 +10,10 @@ import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.MouseAdapter;
+import org.eclipse.swt.events.MouseEvent;
 
 
 public class PoliciesList {
@@ -77,6 +81,12 @@ public class PoliciesList {
 		tblclmnInformations.setText("Informations");
 		
 		Button btnNewButton = new Button(shlPoliciesList, SWT.NONE);
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseDown(MouseEvent e) {
+				NewPolicy.main(null);
+			}
+		});
 		FormData fd_btnNewButton = new FormData();
 		fd_btnNewButton.bottom = new FormAttachment(100, -10);
 		fd_btnNewButton.left = new FormAttachment(0, 172);
